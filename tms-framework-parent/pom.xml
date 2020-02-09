@@ -8,7 +8,7 @@
         <module>../tms-framework-model</module>
         <module>../tms-framework-common</module>
         <module>../tms-framework-utils</module>
-        <module>../xc-service-manage</module>
+        <module>../tms-service-manage</module>
     </modules>
 
     <parent>
