@@ -5,6 +5,7 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @Classname TmsFamily
@@ -17,7 +18,9 @@ import javax.persistence.*;
 @Entity
 @Table(name="family")
 @GenericGenerator(name = "jpa-assigned", strategy = "assigned")
-public class TmsFamily {
+public class TmsFamily implements Serializable {
+
+  private static final long serialVersionUID = 1305926450949886830L;
 
   // 夹具大类id
   @Id

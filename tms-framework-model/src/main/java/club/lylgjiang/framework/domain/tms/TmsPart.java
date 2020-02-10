@@ -5,6 +5,7 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @Classname TmsPart
@@ -17,7 +18,9 @@ import javax.persistence.*;
 @Entity
 @Table(name="part")
 @GenericGenerator(name = "jpa-assigned", strategy = "assigned")
-public class TmsPart {
+public class TmsPart implements Serializable {
+
+  private static final long serialVersionUID = -295910482201222007L;
 
   // 夹具料号id
   @Id

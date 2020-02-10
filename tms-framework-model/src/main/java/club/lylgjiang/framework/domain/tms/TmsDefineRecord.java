@@ -7,6 +7,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * @Classname TmsDefineRecord
@@ -19,7 +20,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name="define_record")
 @GenericGenerator(name = "jpa-assigned", strategy = "assigned")
-public class TmsDefineRecord {
+public class TmsDefineRecord implements Serializable {
+
+  private static final long serialVersionUID = 5569537749606854862L;
 
   // 夹具定义id
   @Column(name="define_id")

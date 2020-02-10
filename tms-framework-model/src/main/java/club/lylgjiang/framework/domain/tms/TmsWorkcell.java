@@ -20,6 +20,8 @@ import java.io.Serializable;
 @GenericGenerator(name = "jpa-assigned", strategy = "assigned")
 public class TmsWorkcell implements Serializable {
 
+    private static final long serialVersionUID = 1815453995727321085L;
+
     // 部门id
     @Id
     @GeneratedValue(generator = "jpa-assigned")

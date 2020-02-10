@@ -5,6 +5,7 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @Classname TmsFixtureDefine
@@ -17,7 +18,9 @@ import javax.persistence.*;
 @Entity
 @Table(name="fixture_define")
 @GenericGenerator(name = "jpa-assigned", strategy = "assigned")
-public class TmsFixtureDefine {
+public class TmsFixtureDefine implements Serializable {
+
+    private static final long serialVersionUID = -1044218057331898104L;
 
     // 夹具定义id
     @Id
